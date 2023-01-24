@@ -1,16 +1,18 @@
 import React from "react";
 
-const EditableButton = (props) => {
+const EditableInput = (props) => {
   return (
-    <button
-      onMouseDown={(evt) => {
-        evt.preventDefault();
-        document.execCommand(props.commandBtn, false, props.changeValue);
-      }}
-    >
-      click
-    </button>
+    <label htmlFor="color" className="Select">
+      <input
+        type={props.type}
+        onChange={props.handleInputChange}
+        value={props.value}
+        id="color"
+        autocomplete="false"
+      />
+      <span>{props.value}</span>
+    </label>
   );
 };
 
-export default EditableButton;
+export default EditableInput;

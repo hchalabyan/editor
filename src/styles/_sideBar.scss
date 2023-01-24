@@ -1,0 +1,232 @@
+.Sidebar{
+  width: 240px;
+  height: 100%;
+  background-color: #FFFFFF;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-sizing: border-box;
+  &__paragraph{
+    font-family: FiraSansBold, sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: #788994;
+    text-align: left;
+    margin: 0;
+  }
+  &__selectFont{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    box-sizing: border-box;
+    .Select{
+      border-radius: 4px;
+    }
+  }
+  &__fontStyle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    position: relative;
+
+    &__icons{
+
+      width: 60px;
+      height: 100%;
+
+      label{
+        border-radius: 0 4px 4px 0;
+        border-left: 0;
+        background: url(../assets/fontSize.png) no-repeat 12px 50%;
+        span{
+          display: none;
+        }
+
+      }
+      input:-webkit-autofill,
+      select:-webkit-autofill{
+        -webkit-text-fill-color: green;
+        -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+        transition: background-color 5000s ease-in-out 0s;
+        color: black;
+
+      }
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+
+    }
+  }
+  &__fontWeight{
+    width: 150px;
+    height: 100%;
+    .Select{
+     border-radius: 4px 0 0 4px;
+    }
+  }
+  &__select{
+    display: flex;
+    position: relative;
+    align-items: center;
+
+    &.LetterStyle{
+      div{
+        display: flex;
+        position: relative;
+        span{
+          position: absolute;
+        }
+      }
+    }
+  }
+  &__selectColor{
+    width: 100%;
+    font-size: 12px;
+    height: 40px;
+    box-sizing: border-box;
+    position: relative;
+    label{
+      border-radius: 4px;
+
+
+    }
+
+  }
+  &__inputsWrapper{
+    display: flex;
+
+  }
+  &__lineHeight, &__letterSpacing{
+    width: 50%;
+    height: 40px;
+    position: relative;
+    span{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 12px;
+      color:#AAB2BB;
+      font-size: 12px;
+    }
+  }
+  &__lineHeight{
+    label{
+      border-radius:4px 0 0 4px ;
+      border-right: 0;
+      background: url(../assets/lineHeight.png) no-repeat 12px 50%;
+    }
+
+  }
+  &__letterSpacing{
+    label{
+      border-radius: 0 4px 4px 0;
+      background: url(../assets/letterSpacing.png) no-repeat 12px 50%;
+    }
+  }
+ .Select{
+    width: 100%;
+    height: 100%;
+    color: #2D3A41;
+    font-size: 12px;
+    padding: 11px 12px;
+    border: 1px solid #E8ECF0;
+    appearance:none;
+    position: relative;
+    box-sizing: border-box;
+  }
+  select.Select{
+    background: url(../assets/vector.png) no-repeat calc(100% - 12px) 50%;
+  }
+
+  label{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-size: 12px;
+
+    input{
+      -webkit-appearance: none;
+      background: none;
+      border: none;
+      outline: none;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      padding-left: 24px;
+      &[type=color]{
+        position: absolute;
+        padding:5px  calc(100% - 24px) 5px 0;
+        background: url(../assets/vector.png) no-repeat calc(100% - 24px) 50%;
+      }
+      &[type=number]{
+        padding-left: 18px;
+      }
+    }
+    span{
+      margin-left: 34px;
+    }
+    img {
+      margin-left: auto;
+    }
+  }
+  &__button{
+    width: 100%;
+    height: 40px;
+    background-color: #27AE60;
+    border-radius: 4px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    font-family: FiraSansSemiBold,sans-serif;
+    cursor: pointer;
+  }
+  &__buttonsWrapper{
+    display: flex;
+
+  }
+  &__alignButton:first-of-type{
+    border-radius: 4px 0 0 4px;
+  }
+  &__alignButton:last-of-type{
+    border-radius: 0 4px 4px 0;
+  }
+  &__RadioGroup{
+    width: 52.5px;
+    height: 40px;
+    border: 1px solid #E8ECF0;
+    background: #FFFFFF;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    label{
+      justify-content: center;
+    }
+    input[type="radio"]:checked+label{
+      svg g rect{
+        fill: #2198ED;
+      }
+    }
+  }
+  &__alignButton{
+    position: relative;
+    appearance: none;
+    margin: 0;
+
+  }
+}
